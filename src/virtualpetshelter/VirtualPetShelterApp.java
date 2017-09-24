@@ -17,10 +17,10 @@ public class VirtualPetShelterApp {
 		System.out.println("Ms. Peeso's Shelter for Peculair Pets");
 		System.out.println("Our current collective of peculair pet's vitals:");
 		System.out.println();
-		System.out.println("Name\tHunger\tThirst\tBoredom");
+		System.out.println("Name\t\tHunger\tThirst\tBoredom");
 		System.out.println("______________________________________");
 		for (VirtualPet currentPeculairPet : newShelter.allPeculairPets()) {
-			System.out.println(currentPeculairPet.name + "\t" + currentPeculairPet.hungerLevel + "\t"
+			System.out.println(currentPeculairPet.name + "\t\t" + currentPeculairPet.hungerLevel + "\t"
 					+ currentPeculairPet.thirstLevel + "\t" + currentPeculairPet.boredLevel);
 			System.out.println("______________________________________");
 		}
@@ -83,10 +83,10 @@ public class VirtualPetShelterApp {
 				System.exit(0);
 			}
 			System.out.println("\nCurrent Status of Ms. Peeso's peculair pets");
-			System.out.println("Name\tHunger\tThirst\tBoredom");
+			System.out.println("Name\t\tHunger\tThirst\tBoredom");
 			System.out.println("_______________________________________");
 			for (VirtualPet current : newShelter.allPeculairPets()) {
-				System.out.println(current.name + "\t" + current.hungerLevel + "\t" + current.thirstLevel + "\t"
+				System.out.println(current.name + "\t\t" + current.hungerLevel + "\t" + current.thirstLevel + "\t"
 						+ current.boredLevel);
 				System.out.println("____________________________________");
 			}
@@ -96,21 +96,3 @@ public class VirtualPetShelterApp {
 		input.close();
 	}
 }
-
-// Create a main method that…
-
-// implements a game loop.
-// asks for user input.
-// writes output to the console.
-// calls VirtualPetShelter's tick method after each interaction
-// Available user interface actions should include (at minimum)…
-
-// feeding all the pets
-// watering all the pets
-// playing with an individual pet, which should display a list of pet names and
-// descriptions, allowing a user to select one
-// allow adoption of a pet, which should display a list of pet names and
-// descriptions, allowing a user to select one
-// allow intake of a pet, prompting the user for the pet's information,
-// requiring the user to (at minimum) specify name and description
-// (Hint: you can use tab characters ("\t") to align console output in columns.)

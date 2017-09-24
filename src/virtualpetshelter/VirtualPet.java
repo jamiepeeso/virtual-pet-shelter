@@ -32,14 +32,14 @@ public class VirtualPet {
 	}
 
 	void comandFeed() {
-		hungerLevel = hungerLevel - 25;
+		hungerLevel = hungerLevel - 15;
 		thirstLevel = thirstLevel + 10;
 		boredLevel = boredLevel - 5;
 	}
 
 	void comandWater() {
 		hungerLevel = hungerLevel + 10;
-		thirstLevel = thirstLevel - 30;
+		thirstLevel = thirstLevel - 15;
 		boredLevel = boredLevel + 5;
 	}
 
@@ -50,11 +50,3 @@ public class VirtualPet {
 	}
 
 }
-
-// include instance variables representing:
-// name
-// description
-// include a constructor that accepts a name and description
-// include a constructor that, in addition to name and description, accepts
-// default values for the pet's attributes
-// (hunger, boredom, etc)
