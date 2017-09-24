@@ -55,7 +55,7 @@ public class VirtualPetShelterApp {
 					System.out.println(currentPeculairPet.name + ", the " + currentPeculairPet.description);
 				}
 				String petToPlayWith = input.next();
-				newShelter.getName(petToPlayWith).comandPlay();
+				newShelter.getName(petToPlayWith.toLowerCase()).comandPlay();
 				System.out.println("You played with " + petToPlayWith);
 				break;
 			case "4":
