@@ -14,14 +14,14 @@ public class VirtualPetShelterApp {
 		newShelter.addPeculiarPet(mercy);
 		newShelter.addPeculiarPet(lorilia);
 		newShelter.addPeculiarPet(bran);
-		System.out.println("Ms. Peeso's Shelter for Peculair Pets");
-		System.out.println("Our current collective of peculair pet's vitals:");
+		System.out.println("Ms. Peeso's Shelter for Peculiar Pets");
+		System.out.println("Our current collective of peculiar pet's vitals:");
 		System.out.println();
 		System.out.println("Name\t\tHunger\tThirst\tBoredom");
 		System.out.println("______________________________________");
-		for (VirtualPet currentPeculairPet : newShelter.allPeculiarPets()) {
-			System.out.println(currentPeculairPet.name + "\t\t" + currentPeculairPet.hungerLevel + "\t"
-					+ currentPeculairPet.thirstLevel + "\t" + currentPeculairPet.boredLevel);
+		for (VirtualPet currentPeculiarPet : newShelter.allPeculiarPets()) {
+			System.out.println(currentPeculiarPet.name + "\t\t" + currentPeculiarPet.hungerLevel + "\t"
+					+ currentPeculiarPet.thirstLevel + "\t" + currentPeculiarPet.boredLevel);
 			System.out.println("______________________________________");
 		}
 		boolean goToShelter = false;
@@ -81,7 +81,7 @@ public class VirtualPetShelterApp {
 				break;
 			case "6":
 				System.out.println(
-						"Thank you for visiting Ms. Peeso's Shelter for Peculair Pets, please come back again soon.");
+						"Thank you for visiting Ms. Peeso's Shelter for Peculiar Pets, please come back again soon.");
 				System.exit(0);
 			}
 			System.out.println("\nCurrent Status of Ms. Peeso's peculair pets");
