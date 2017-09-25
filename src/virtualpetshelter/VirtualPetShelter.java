@@ -12,28 +12,28 @@ public class VirtualPetShelter {
 		return msPeesosHumainSocietyForPeculiarPets.get(name);
 	}
 
-	public Collection<VirtualPet> allPeculairPets() {
+	public Collection<VirtualPet> allPeculiarPets() {
 		return msPeesosHumainSocietyForPeculiarPets.values();
 	}
 
-	public void feedAllPeculairPets() {
+	public void feedAllPeculiarPets() {
 		for (VirtualPet p : msPeesosHumainSocietyForPeculiarPets.values()) {
 			p.comandFeed();
 		}
 	}
 
-	public void waterAllPeculairPets() {
+	public void waterAllPeculiarPets() {
 		for (VirtualPet p : msPeesosHumainSocietyForPeculiarPets.values()) {
 			p.comandWater();
 		}
 	}
 
-	public void addPeculairPet(VirtualPet newPeculiarPet) {
+	public void addPeculiarPet(VirtualPet newPeculiarPet) {
 		msPeesosHumainSocietyForPeculiarPets.put(newPeculiarPet.name.toLowerCase(), newPeculiarPet);
 	}
 
-	public void adoptPeculairPet(String removedPeculairPet) {
-		msPeesosHumainSocietyForPeculiarPets.remove(removedPeculairPet);
+	public void adoptPeculiarPet(String removedPeculiarPet) {
+		msPeesosHumainSocietyForPeculiarPets.remove(removedPeculiarPet.toLowerCase());
 	}
 
 	public void tickAllPeculiarPets() {

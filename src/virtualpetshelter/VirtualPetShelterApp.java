@@ -6,20 +6,20 @@ public class VirtualPetShelterApp {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		VirtualPetShelter newShelter = new VirtualPetShelter();
-		VirtualPet drogon = new VirtualPet("Drogon", "Dragon", 2, 6, 3);
-		VirtualPet mercy = new VirtualPet("Mercy", "Werecoyote", 2, 5, 2);
-		VirtualPet lorilia = new VirtualPet("Lorilia", "Hippogriff", 7, 3, 4);
-		VirtualPet bran = new VirtualPet("Bran", "Werewolf", 2, 4, 7);
-		newShelter.addPeculairPet(drogon);
-		newShelter.addPeculairPet(mercy);
-		newShelter.addPeculairPet(lorilia);
-		newShelter.addPeculairPet(bran);
+		VirtualPet drogon = new VirtualPet("drogon", "dragon", 2, 6, 3);
+		VirtualPet mercy = new VirtualPet("mercy", "werecoyote", 2, 5, 2);
+		VirtualPet lorilia = new VirtualPet("lorilia", "hippogriff", 7, 3, 4);
+		VirtualPet bran = new VirtualPet("bran", "werewolf", 2, 4, 7);
+		newShelter.addPeculiarPet(drogon);
+		newShelter.addPeculiarPet(mercy);
+		newShelter.addPeculiarPet(lorilia);
+		newShelter.addPeculiarPet(bran);
 		System.out.println("Ms. Peeso's Shelter for Peculair Pets");
 		System.out.println("Our current collective of peculair pet's vitals:");
 		System.out.println();
 		System.out.println("Name\t\tHunger\tThirst\tBoredom");
 		System.out.println("______________________________________");
-		for (VirtualPet currentPeculairPet : newShelter.allPeculairPets()) {
+		for (VirtualPet currentPeculairPet : newShelter.allPeculiarPets()) {
 			System.out.println(currentPeculairPet.name + "\t\t" + currentPeculairPet.hungerLevel + "\t"
 					+ currentPeculairPet.thirstLevel + "\t" + currentPeculairPet.boredLevel);
 			System.out.println("______________________________________");
@@ -40,18 +40,18 @@ public class VirtualPetShelterApp {
 			String userResponse = input.next();
 			switch (userResponse) {
 			case "1":
-				newShelter.feedAllPeculairPets();
+				newShelter.feedAllPeculiarPets();
 				System.out.println("You fed the collective.");
 				System.out.println("Everyone enjoyed their meals.");
 				break;
 			case "2":
-				newShelter.waterAllPeculairPets();
+				newShelter.waterAllPeculiarPets();
 				System.out.println("The collective is now hydrated.");
 				break;
 			case "3":
 				System.out.println("What peculair pet would you like to play with?");
 				System.out.println("Enter their name to continue.");
-				for (VirtualPet currentPeculairPet : newShelter.allPeculairPets()) {
+				for (VirtualPet currentPeculairPet : newShelter.allPeculiarPets()) {
 					System.out.println(currentPeculairPet.name + ", the " + currentPeculairPet.description);
 				}
 				String petToPlayWith = input.next();
@@ -60,11 +60,11 @@ public class VirtualPetShelterApp {
 				break;
 			case "4":
 				System.out.println("Which pet do you want to adopt? Enter their name below.");
-				for (VirtualPet currentPet : newShelter.allPeculairPets()) {
+				for (VirtualPet currentPet : newShelter.allPeculiarPets()) {
 					System.out.println(currentPet.name + ", " + currentPet.description);
 				}
 				String petNameToAdopt = input.next();
-				newShelter.adoptPeculairPet(petNameToAdopt);
+				newShelter.adoptPeculiarPet(petNameToAdopt);
 				System.out.println("You adopted " + petNameToAdopt);
 				System.out.println("");
 				break;
@@ -75,17 +75,19 @@ public class VirtualPetShelterApp {
 				System.out.println("What kind of creature is this pet?");
 				String newPetDescription = input.next();
 				VirtualPet strayPet = new VirtualPet(newPetName, newPetDescription);
-				newShelter.addPeculairPet(strayPet);
-				System.out.println("We will take good care of " + newPetName + " and find them a safe and happy home.");
+				newShelter.addPeculiarPet(strayPet);
+				System.out
+						.println("We will take great care of " + newPetName + " and find them a safe and happy home.");
 				break;
 			case "6":
-				System.out.println("Thank you for visiting Ms. Peeso's Peculair Pet Shelter, please come back soon.");
+				System.out.println(
+						"Thank you for visiting Ms. Peeso's Shelter for Peculair Pets, please come back again soon.");
 				System.exit(0);
 			}
 			System.out.println("\nCurrent Status of Ms. Peeso's peculair pets");
 			System.out.println("Name\t\tHunger\tThirst\tBoredom");
 			System.out.println("_______________________________________");
-			for (VirtualPet current : newShelter.allPeculairPets()) {
+			for (VirtualPet current : newShelter.allPeculiarPets()) {
 				System.out.println(current.name + "\t\t" + current.hungerLevel + "\t" + current.thirstLevel + "\t"
 						+ current.boredLevel);
 				System.out.println("____________________________________");
