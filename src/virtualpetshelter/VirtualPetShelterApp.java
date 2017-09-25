@@ -49,10 +49,10 @@ public class VirtualPetShelterApp {
 				System.out.println("The collective is now hydrated.");
 				break;
 			case "3":
-				System.out.println("What peculair pet would you like to play with?");
+				System.out.println("What peculiar pet would you like to play with?");
 				System.out.println("Enter their name to continue.");
-				for (VirtualPet currentPeculairPet : newShelter.allPeculiarPets()) {
-					System.out.println(currentPeculairPet.name + ", the " + currentPeculairPet.description);
+				for (VirtualPet currentPeculiarPet : newShelter.allPeculiarPets()) {
+					System.out.println(currentPeculiarPet.name + ", the " + currentPeculiarPet.description);
 				}
 				String petToPlayWith = input.next();
 				newShelter.getName(petToPlayWith.toLowerCase()).comandPlay();
