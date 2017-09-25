@@ -28,6 +28,12 @@ public class VirtualPetShelter {
 		}
 	}
 
+	public void cleanAllPeculiarPets() {
+		for (VirtualPet p : msPeesosHumainSocietyForPeculiarPets.values()) {
+			p.comandClean();
+		}
+	}
+
 	public void addPeculiarPet(VirtualPet newPeculiarPet) {
 		msPeesosHumainSocietyForPeculiarPets.put(newPeculiarPet.name.toLowerCase(), newPeculiarPet);
 	}
